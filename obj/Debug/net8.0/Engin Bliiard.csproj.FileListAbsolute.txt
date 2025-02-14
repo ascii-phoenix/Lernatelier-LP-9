@@ -1,0 +1,14 @@
+C:\Users\eloik\source\repos\Engin Bliiard\bin\Debug\net8.0\Engin Bliiard.exe
+C:\Users\eloik\source\repos\Engin Bliiard\bin\Debug\net8.0\Engin Bliiard.deps.json
+C:\Users\eloik\source\repos\Engin Bliiard\bin\Debug\net8.0\Engin Bliiard.runtimeconfig.json
+C:\Users\eloik\source\repos\Engin Bliiard\bin\Debug\net8.0\Engin Bliiard.dll
+C:\Users\eloik\source\repos\Engin Bliiard\bin\Debug\net8.0\Engin Bliiard.pdb
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.AssemblyInfoInputs.cache
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.AssemblyInfo.cs
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.csproj.CoreCompileInputs.cache
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.dll
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\refint\Engin Bliiard.dll
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.pdb
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\Engin Bliiard.genruntimeconfig.cache
+C:\Users\eloik\source\repos\Engin Bliiard\obj\Debug\net8.0\ref\Engin Bliiard.dll
