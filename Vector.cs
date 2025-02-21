@@ -48,7 +48,7 @@ namespace Engin_Bliiard
             double length = Length();
             if (length != 0)
             {
-                return this / length;
+                return new Vector(Vx / length, Vy / length);
             }
             return new Vector(0, 0);
         }

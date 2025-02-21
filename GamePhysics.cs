@@ -27,12 +27,15 @@ namespace Engin_Bliiard
                 double closestY = line.Start.Y + t * dy;
 
                 double distanceSquared = (billiardBall.Position.X - closestX) * (billiardBall.Position.X - closestX) + (billiardBall.Position.Y - closestY) * (billiardBall.Position.Y - closestY);
-                return distanceSquared <= billiardBall.Radius * billiardBall.Radius;
+                return distanceSquared <= (billiardBall.Radius * billiardBall.Radius);
             }
             else if (other is BilliardBall otherBall)
             {
-                double distanceSquared = (otherBall.Position.X - billiardBall.Position.X) * (otherBall.Position.X - billiardBall.Position.X) + (otherBall.Position.Y - billiardBall.Position.Y) * (otherBall.Position.Y - billiardBall.Position.Y);
-                return distanceSquared <= (billiardBall.Radius + otherBall.Radius) * (billiardBall.Radius + otherBall.Radius);
+                double dx = billiardBall.Position.X - otherBall.Position.X;
+                double dy = billiardBall.Position.Y - otherBall.Position.Y;
+                double distanceSquared = dx * dx + dy * dy;
+                double radiusSum = billiardBall.Radius + otherBall.Radius;
+                return distanceSquared <= (radiusSum * radiusSum);
             }
             else
             {
@@ -129,7 +132,41 @@ namespace Engin_Bliiard
         }
         public void HitChangeVelocity(BilliardBall billiardBall, IGameObject other)
         {
-            if (other is UnmovableLine line)
+            if (other is BilliardBall otherBall) { 
+        // Compute normal vector
+                Vector normal = new Vector(otherBall.Position.X - billiardBall.Position.X,
+                                            otherBall.Position.Y - billiardBall.Position.Y);
+                normal = normal.Normalize();
+
+                // Compute relative velocity
+                Vector relativeVelocity = new Vector(
+                otherBall.Velocity.Vx - billiardBall.Velocity.Vx,
+                otherBall.Velocity.Vy - billiardBall.Velocity.Vy);
+
+                // Compute velocity along the normal
+                double velocityAlongNormal = relativeVelocity.Vx * normal.Vx + relativeVelocity.Vy * normal.Vy;
+
+                // If the balls are moving apart, no collision response is needed
+                if (velocityAlongNormal > 0)
+                {
+                    return;
+                }
+
+                // Assume equal masses (or replace with billiardBall.Mass and otherBall.Mass if available)
+                double impulse = velocityAlongNormal; // Equivalent to dividing by sum of equal masses
+
+                // Apply impulse in the normal direction
+                billiardBall.Velocity = new Vector(
+                    billiardBall.Velocity.Vx + impulse * normal.Vx,
+                    billiardBall.Velocity.Vy + impulse * normal.Vy
+                );
+
+                otherBall.Velocity = new Vector(
+                    otherBall.Velocity.Vx - impulse * normal.Vx,
+                    otherBall.Velocity.Vy - impulse * normal.Vy
+                );
+            }
+            else if (other is UnmovableLine line)
             {
                 Vector normal = new Vector(line.End.Y - line.Start.Y, line.Start.X - line.End.X).Normalize();
                 double velocityAlongNormal = billiardBall.Velocity.Vx * normal.Vx + billiardBall.Velocity.Vy * normal.Vy;
@@ -137,25 +174,6 @@ namespace Engin_Bliiard
                     billiardBall.Velocity.Vx - 2 * velocityAlongNormal * normal.Vx,
                     billiardBall.Velocity.Vy - 2 * velocityAlongNormal * normal.Vy
                 );
-            }
-            else if (other is BilliardBall otherBall)
-            {
-                Vector relativeVelocity = new Vector(billiardBall.Velocity.Vx - otherBall.Velocity.Vx, billiardBall.Velocity.Vy - otherBall.Velocity.Vy);
-
-                // Normal vector between the balls
-                Vector normal = new Vector(otherBall.Position.X - billiardBall.Position.X, otherBall.Position.Y - billiardBall.Position.Y).Normalize();
-                double velocityAlongNormal = relativeVelocity.Vx * normal.Vx + relativeVelocity.Vy * normal.Vy;
-
-                if (velocityAlongNormal > 0)
-                {
-                    return;
-                }
-
-                // Impulse transfer - assuming equal mass and elastic collision, the balls exchange velocity along the collision axis
-                Vector impulse = new Vector(velocityAlongNormal * normal.Vx, velocityAlongNormal * normal.Vy);
-
-                billiardBall.Velocity = new Vector(billiardBall.Velocity.Vx - impulse.Vx, billiardBall.Velocity.Vy - impulse.Vy);
-                otherBall.Velocity = new Vector(otherBall.Velocity.Vx + impulse.Vx, otherBall.Velocity.Vy + impulse.Vy);
             }
             else
             {
