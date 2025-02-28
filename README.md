@@ -15,7 +15,13 @@ Leider gibt es noch ein Paar Fehler
 
 Heute habe ich mehrere Bugs in der Kollisionslogik behoben. Besonders die Tests für die Kollisionserkennung und die Geschwindigkeitsänderung nach einem Treffer wurden verbessert. Die Tests zeigen nun das erwartete Verhalten, was zu stabileren Physikberechnungen führt.
 ## 28.02.2025
-- [ ] Test für Cueball
-- [ ] Cueball programieren
-- [ ] Cueball bugfixes
-- [ ] alle Klassen nach Biliard tansformieren
+- [x] Test für Cueball
+- [x] Cueball programieren
+- [x] Cueball bugfixes
+- [x] alle Klassen nach Biliard tansformieren
+Heute habe ich die Implementierung des Cueballs abgeschlossen und sichergestellt, dass alle Klassen konsistent mit der Billardlogik sind. Die Tests für den Cueball wurden erfolgreich durchgeführt, und alle bekannten Fehler wurden behoben. Die Umstellung auf eine berechnungsbasierte Physik hat sich als vorteilhaft erwiesen, da sie präzisere und vorhersehbarere Ergebnisse liefert.
+## 07.03.2025
+- [ ] Test für Cuestick
+- [ ] Cuestick programieren
+- [ ] Cuestick bugfixes
+- [ ] maus mit cuestick verbinden
