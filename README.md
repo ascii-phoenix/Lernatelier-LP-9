@@ -21,7 +21,13 @@ Heute habe ich mehrere Bugs in der Kollisionslogik behoben. Besonders die Tests 
 - [x] alle Klassen nach Biliard tansformieren
 Heute habe ich die Implementierung des Cueballs abgeschlossen und sichergestellt, dass alle Klassen konsistent mit der Billardlogik sind. Die Tests für den Cueball wurden erfolgreich durchgeführt, und alle bekannten Fehler wurden behoben. Die Umstellung auf eine berechnungsbasierte Physik hat sich als vorteilhaft erwiesen, da sie präzisere und vorhersehbarere Ergebnisse liefert.
 ## 07.03.2025
-- [ ] Test für Cuestick
-- [ ] Cuestick programieren
+- [x] Test für Cuestick
+- [x] Cuestick programieren
 - [ ] Cuestick bugfixes
 - [ ] maus mit cuestick verbinden
+Heute habe ich den Cuestick implementiert und grundlegende Tests durchgeführt. Der Stick interagiert bereits mit dem Cueball, jedoch gibt es noch einige Ungenauigkeiten in der Kollision und Bewegungsberechnung. Die Maussteuerung wurde noch nicht implementiert, was ein nächster wichtiger Schritt sein wird. Zunächst werde ich jedoch bestehende Fehler beheben, um eine stabile Basis für die Steuerung zu schaffen.
+## 14.03.2025
+- [ ] Cuestick bugfixes
+- [ ] Maus mit cuestick verbinden
+- [ ] Test für Mehrere kolisionen
+- [ ] Liste für Treffen aufbauen
