@@ -27,7 +27,9 @@ Heute habe ich die Implementierung des Cueballs abgeschlossen und sichergestellt
 - [ ] maus mit cuestick verbinden
 Heute habe ich den Cuestick implementiert und grundlegende Tests durchgeführt. Der Stick interagiert bereits mit dem Cueball, jedoch gibt es noch einige Ungenauigkeiten in der Kollision und Bewegungsberechnung. Die Maussteuerung wurde noch nicht implementiert, was ein nächster wichtiger Schritt sein wird. Zunächst werde ich jedoch bestehende Fehler beheben, um eine stabile Basis für die Steuerung zu schaffen.
 ## 14.03.2025
-- [ ] Cuestick bugfixes
-- [ ] Maus mit cuestick verbinden
-- [ ] Test für Mehrere kolisionen
-- [ ] Liste für Treffen aufbauen
+- [x] Cuestick bugfixes
+- [x] Maus mit cuestick verbinden
+- [x] Test für Mehrere kolisionen
+- [x] Liste für Treffen aufbauen
+Heute habe ich die Maussteuerung für den Cuestick implementiert und Fehler in der Kollisionslogik behoben. Zudem speichert eine Liste nun alle Kollisionen, um Mehrfachtreffer besser zu analysieren. Die Physik läuft stabiler, kleine Ungenauigkeiten bleiben jedoch.
+## 21.03.2025
