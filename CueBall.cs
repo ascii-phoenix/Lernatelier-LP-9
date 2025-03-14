@@ -11,9 +11,9 @@ namespace Engin_Bliiard
         public CueBall(double x, double y, double vx = 0, double vy = 0) : base(x, y, vx, vy)
         {
         }
-        public void InitialHit(double angle, double force)
+        public void InitialHit(Vector vector)
         {
-            SetVelocity(force * Math.Cos(angle), force * Math.Sin(angle));
+            SetVelocity(vector.Vx, vector.Vy);
         }
     }
 }

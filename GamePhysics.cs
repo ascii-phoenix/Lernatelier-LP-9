@@ -14,6 +14,20 @@ namespace Engin_Bliiard
         {
             gameObjects.Add(gameObject);
         }
+        public List<IGameObject> GetCollisions(BilliardBall billiardBall)
+        {
+            List<IGameObject> collisions = new List<IGameObject>();
+
+            foreach (var gameObject in gameObjects)
+            {
+                if (CheckCollision(billiardBall, gameObject))
+                {
+                    collisions.Add(gameObject);
+                }
+            }
+
+            return collisions;
+        }
         public bool CheckCollision(BilliardBall billiardBall, IGameObject other)
         {
             if (other is UnmovableLine line)
