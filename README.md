@@ -33,3 +33,10 @@ Heute habe ich den Cuestick implementiert und grundlegende Tests durchgeführt. 
 - [x] Liste für Treffen aufbauen
 Heute habe ich die Maussteuerung für den Cuestick implementiert und Fehler in der Kollisionslogik behoben. Zudem speichert eine Liste nun alle Kollisionen, um Mehrfachtreffer besser zu analysieren. Die Physik läuft stabiler, kleine Ungenauigkeiten bleiben jedoch.
 ## 21.03.2025
+Ich habe mich am 21.03.2025 auf LeetCode in Python 3.11 fokussiert, um die Aufgaben des Moduls 259 (Entwicklung von IT-Lösungen mithilfe von Machine Learning) auszuführen. Ich habe die nachfolgenden LeetCode-Aufgaben bearbeitet: 
+- Aufgabe 2
+- Aufgabe 26 (diese musste aufgrund der Methode neu geschrieben werden.Clear() sind in Python 3.11 nicht in Listen erhältlich.)
+- Aufgabe 50 (die mit einer rekursiven Lösung gelöst wurde) 
+- Aufgabe 58
+- Aufgabe 69 (die Aufgabe wurde hier nicht vollständig erfüllt)
+- Aufgabe 70 (die sich ausschließlich auf die Fibonacci-Reihe bezog)
